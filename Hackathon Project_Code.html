@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+
+    <!--Header Section-->
+    <header>
+        <div class="logo">MY PORTFOLIO</div>
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle">🌙</button>
+    </header>
+
+
+    <!--Hero Section-->
+    <section class="hero">
+        <div class="content">
+            <div class="profile-container">
+                <img src="C:\Users\da Silva\Downloads\Hackathon_Project Code\Pedro_Ghibli.PNG" alt="Pedro da Silva" class="profile-pic">
+            </div>
+            <h1>Hi, I'm <span id="typing"></span></h1>
+            <p>I am passionate about leveraging technology to develop innovative solutions that address society's most pressing challenges.</p>
+
+    <!-- Social Media Buttons -->
+        <a href="#contact" class="cta">Let's Connect</a>
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/pedro-neel-da-silva-0908091ab" target="_blank" class="social-btn linkedin">LinkedIn</a>
+            <a href="https://github.com/PedroNeel" target="_blank" class="social-btn github">GitHub</a>
+            <a href="https://www.facebook.com/share/162XhttGjp/" target="_blank" class="social-btn facebook">Facebook</a>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- About Section -->
+<section id="about" class="glass">
+    <h2>ABOUT ME</h2>
+    <img src="C:\Users\da Silva\Downloads\Hackathon_Project Code\batman.gif" alt="About Me GIF" class="section-gif">
+    <p>I am a tech enthusiast who is passionate about building innovative solutions that solve the world's problems.</p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>SKILLS</h2>
+    <img src="C:\Users\da Silva\Downloads\Hackathon_Project Code\giphy.gif" alt="Skills GIF" class="section-gif">
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="glass">
+    <h2>PROJECTS</h2>
+    <img src="C:\Users\da Silva\Downloads\Hackathon_Project Code\i-like-taking-on-major-project-alex.gif" alt="Projects GIF" class="section-gif">
+    <div class="project">
+        <h3>BUILD MY PROFILE</h3>
+        <p>The 'Build My Profile' project is designed not only to showcase your proficiency in HTML and CSS but also to encourage ingenuity and creativity. This project challenges participants to craft a visually appealing and well-structured personal profile page, demonstrating their technical skills while expressing their unique style and personality. Through thoughtful design and coding, participants will refine their front-end development abilities and enhance their portfolio with a polished, professional-grade project.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>CONTACT ME</h2>
+    <img src="C:\Users\da Silva\Downloads\Hackathon_Project Code\call-me-neil-degrasse-tyson.gif" alt="Contact Me GIF" class="section-gif">
+    <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="form-message"></p>
+    </form>
+</section>
+
+
+    <!--Footer Section-->
+    <footer>
+        <p>©Pedro Neel da Silva. All rights reserved.</p>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/pedro-neel-da-silva-0908091ab" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/PedroNeel" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/share/162XhttGjp/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </footer>
+
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to right, #e3f2fd, #f9fbe7);
+            color: #333;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(to right, #263238, #37474f);
+            color: #e0e0e0;
+        }
+
+        body.dark-mode a {
+            color: #80cbc4;
+        }
+
+        body.dark-mode .cta {
+            background: #004d40;
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #00796b;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #004d40;
+        }
+        
+        html {
+    scroll-behavior: smooth;
+}
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        
+        .hero .content {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+        }
+        
+        .hero h1 span {
+            color: #00796b;
+        }
+        
+        .cta {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .section-gif {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+        /* Dark Mode Toggle */
+        #dark-mode-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #00796b;
+            transition: 0.3s;
+        }
+        
+        #dark-mode-toggle:hover {
+            color: #004d40;
+        }
+
+    /* Social Media Buttons in Hero Section */
+        .social-buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+    /* Social Button Colors */
+        .linkedin {
+            background: #0077b5;
+            color: white;
+        }
+
+        .github {
+            background: #333;
+            color: white;
+        }
+
+        .facebook {
+            background: #1877f2;
+            color: white;
+        }
+
+    /* Hover Effects */
+        .social-btn:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+        
+        /* Profile Picture */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px;
+            text-align: center;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(8px);
+        }
+        
+        /* Skills */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .skill {
+            padding: 10px 20px;
+            background: #004d40;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        /* Contact */
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            background: #00796b;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+    /* Footer Social Icons */
+        .footer-social {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.2);
+        }
+        </style>
+
+
+    <script>
+        // Typing Effect
+        const textArray = ["a Developer", "a Designer", "a Problem Solver"];
+        let typingIndex = 0, charIndex = 0;
+        function typeEffect() {
+            if (charIndex < textArray[typingIndex].length) {
+                document.getElementById("typing").textContent += textArray[typingIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("typing").textContent = "";
+                    charIndex = 0;
+                    typingIndex = (typingIndex + 1) % textArray.length;
+                    typeEffect();
+                }, 1500);
+            }
+        }
+        typeEffect();
+
+        // Smooth Scrolling
+        document.querySelectorAll("nav ul li a").forEach(anchor => {
+            anchor.addEventListener("click", function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+
+        // Form Validation
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const formMessage = document.getElementById("form-message");
+            
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        formMessage.textContent = "Please enter a valid email address!";
+        formMessage.style.color = "red";
+        return;
+    } else {
+        formMessage.textContent = "Message sent successfully!";
+        formMessage.style.color = "green";
+        this.reset();
+    }
+        });
+    </script>
+</body>
+</html>
